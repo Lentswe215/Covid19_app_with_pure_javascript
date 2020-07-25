@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Peddana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@700&display=swap');
+
+nav {
+  background: darken($color: #333, $amount: 29);
+  font-family: 'Fruktur', cursive;
+  font-size: 190%;
+}
+
+.wrapper {
+  min-height: calc(100vh - 73px);
+  background-image: url(../images/grayscale-photo-of-volcano-997443.jpg);
+  // background: yellow;
+  background-size: cover;
+//   justify-content: center;
+//   align-items: center;
+  padding: 5vh 0;
+
+  h1 {
+      font-family: 'Bitter', serif;
+  }
+}
+
+.main-body {
+  display: grid;
+  grid-template-columns: 5;
+  grid-template-areas: 'newConfirmed''totalConfirmed''newDeath' 'totalDeath' 'recovered';
+grid-gap: 20px;
+  //   justify-content: space-between;
+  margin-bottom: 20px;
+  font-family: 'Peddana', serif;
+
+  & > div {
+    border: 1px solid;
+    padding: 1rem;
+    // margin: 1rem 0.8rem;
+    background-color: darken($color: #333, $amount: 60);
+    text-align: center;
+
+    p{
+        font-size: 60px;
+        font-family: 'PT Serif', serif;
+    }
+  }
+
+}
