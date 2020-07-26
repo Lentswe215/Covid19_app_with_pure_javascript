@@ -3,46 +3,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@700&display=swap');
 
-nav {
-  background: darken($color: #333, $amount: 29);
-  font-family: 'Fruktur', cursive;
-  font-size: 190%;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.searchrow {
+  padding-left: 35%;
+  // background: lighten($color: #000, $amount:34);
+}
+.searchtxtbox {
+  width: 128%;
 }
 
 .wrapper {
   min-height: calc(100vh - 73px);
-  background-image: url(../images/grayscale-photo-of-volcano-997443.jpg);
-  // background: yellow;
-  background-size: cover;
+  // background-image: url(../images/grayscale-photo-of-volcano-997443.jpg);
+  background: linear-gradient(to bottom right, darken($color: #333, $amount: 10), #333, lighten(#333, 10), #333);
+  // background-size: cover;
 //   justify-content: center;
 //   align-items: center;
   padding: 5vh 0;
-
+i{
+  font-size: 26px;
+}
   h1 {
       font-family: 'Bitter', serif;
   }
 }
 
 .main-body {
-  display: grid;
-  grid-template-columns: 5;
-  grid-template-areas: 'newConfirmed''totalConfirmed''newDeath' 'totalDeath' 'recovered';
+  // display: grid;
+  // grid-template-columns: repeat(5, 1fr);
+  // grid-template-areas: 'newConfirmed totalConfirmed newDeath totalDeath recovered';
+  display: flex;
 grid-gap: 20px;
-  //   justify-content: space-between;
+  
   margin-bottom: 20px;
   font-family: 'Peddana', serif;
 
   & > div {
     border: 1px solid;
     padding: 1rem;
-    // margin: 1rem 0.8rem;
-    background-color: darken($color: #333, $amount: 60);
+    width:100%;
     text-align: center;
 
     p{
-        font-size: 60px;
+        font-size: 50px;
         font-family: 'PT Serif', serif;
     }
   }
 
 }
+ .newConfirmed {
+grid-area: newConfirmed;
+ }
+
+ .totalConfirmed{
+  grid-area: totalConfirmed;
+
+ }
+ .new-death {
+  grid-area: newDeath;
+ }
+
+ .total-death{
+  grid-area: totalDeath;
+
+ }
+
+ .recovered {
+  grid-area: recovered;
+
+ }
+
+
+ @media screen and (max-width:1100px){
+  body {
+    background-color: black;
+  }
+  .searchrow {
+    padding-left:0;
+    // background: lighten($color: #000, $amount:34);
+  }
+  .searchtxtbox {
+    width: 90vw;
+  }
+  .searchbar {
+    margin-left: auto;
+  }
+  .searchbtn {
+    margin-left: 90%;
+  }
+  h1 {
+    font-size: 50px !important;
+  }
+  .wrapper {
+    background: black;
+  }
+
+  .main-body {
+  //   grid-template-columns: 1rf;
+  // grid-template-areas: 'newConfirmed' 'totalConfirmed' 'newDeath' 'totalDeath' 'recovered';
+  flex-direction: column;;
+
+
+  h1 {
+    font-size: 25px !important;
+  }
+    & > div {
+      width: 90vw;
+      margin: 0 auto;
+    }
+  }
+
+ }
