@@ -4,3 +4,9 @@ This website show the current global covid19 statistic and There is a search bar
 ## Setup
 - To run this web app you will need web browser
 - Clone the github repository `$ git clone https://github.com/Lentswe215/Covid19_app_with_pure_javascript.git`
+
+## Tools used 
+- Html
+- JavaScript
+- Sass
+- Bootstrap
