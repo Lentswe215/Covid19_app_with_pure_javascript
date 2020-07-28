@@ -15,12 +15,18 @@
 }
 .searchtxtbox {
   width: 128%;
+  border: solid 2px;
+  font-weight: 400;
+
+}
+.searchbtn {
+margin-left: 0;
 }
 
 .wrapper {
   min-height: calc(100vh - 73px);
   // background-image: url(../images/grayscale-photo-of-volcano-997443.jpg);
-  background: linear-gradient(to bottom right, darken($color: #333, $amount: 10), #333, lighten(#333, 10), #333);
+  background:black;
   // background-size: cover;
 //   justify-content: center;
 //   align-items: center;
@@ -88,13 +94,14 @@ grid-area: newConfirmed;
     // background: lighten($color: #000, $amount:34);
   }
   .searchtxtbox {
-    width: 90vw;
+    margin-left: 30vw;
+    width: 30vw;
   }
   .searchbar {
-    margin-left: auto;
+    margin-left: 70%;
   }
   .searchbtn {
-    margin-left: 90%;
+    margin-left: 40%;
   }
   h1 {
     font-size: 50px !important;
@@ -118,4 +125,24 @@ grid-area: newConfirmed;
     }
   }
 
+ }
+ 
+ @media screen and (max-width:768px){
+  .searchtxtbox {
+    margin-left: 17vw;
+    width: 60vw;
+  } 
+  .searchbtn {
+     margin-left: 67%;
+   }
+ }
+ @media screen and (max-width: 478px) {
+  .searchtxtbox {
+    margin-left: 5vw;
+    width: 80vw;
+  }
+ 
+  .searchbtn {
+    margin-left: 76%;
+  }
  }
